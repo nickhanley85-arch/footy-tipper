@@ -24,7 +24,7 @@ function confidenceFromDiff(diff, injuryImpact) {
 }
 
 function probabilityFromDiff(diff) {
-  const probability = 50 + clamp(Math.round(diff * 1.2), -24, 24);
+  const probability = 50 + clamp(Math.round(Math.abs(diff) * 1.2), 0, 24);
   return `${probability}%`;
 }
 
@@ -68,6 +68,60 @@ function scoringCopy(scoringTrend, teamName) {
   }
 }
 
+function scoringTrendValue(scoringTrend) {
+  switch (scoringTrend) {
+    case "rising":
+      return 1.25;
+    case "volatile":
+      return -0.35;
+    case "low":
+      return -0.75;
+    default:
+      return 0;
+  }
+}
+
+function formatSigned(value) {
+  const rounded = Math.round(value * 100) / 100;
+  return `${rounded >= 0 ? "+" : ""}${rounded.toFixed(2)}`;
+}
+
+function buildModelBreakdown(match, values) {
+  const { home, away } = match;
+  const total = values.total ?? (
+    values.rating +
+    values.venue +
+    values.form +
+    values.stoppage +
+    values.transition +
+    values.pressure +
+    values.scoring +
+    values.injury
+  );
+  const edgeTeam = total >= 0 ? home : away;
+  const absTotal = Math.abs(total);
+  const summary = absTotal >= 12
+    ? `${edgeTeam} holds a strong model edge.`
+    : absTotal >= 6
+      ? `${edgeTeam} holds a workable model edge.`
+      : `${edgeTeam} only holds a narrow model edge.`;
+
+  return {
+    summary,
+    total: formatSigned(total),
+    rows: [
+      ["Ratings", `${home} ${formatSigned(values.rating)}`, `${away} ${formatSigned(-values.rating)}`],
+      ["Venue", `${home} ${formatSigned(values.venue)}`, `${away} ${formatSigned(-values.venue)}`],
+      ["Form", `${home} ${formatSigned(values.form)}`, `${away} ${formatSigned(-values.form)}`],
+      ["Stoppage", `${home} ${formatSigned(values.stoppage)}`, `${away} ${formatSigned(-values.stoppage)}`],
+      ["Transition", `${home} ${formatSigned(values.transition)}`, `${away} ${formatSigned(-values.transition)}`],
+      ["Pressure", `${home} ${formatSigned(values.pressure)}`, `${away} ${formatSigned(-values.pressure)}`],
+      ["Scoring trend", `${home} ${formatSigned(values.scoring)}`, `${away} ${formatSigned(-values.scoring)}`],
+      ["Injuries", `${home} ${formatSigned(values.injury)}`, `${away} ${formatSigned(-values.injury)}`]
+    ]
+  };
+}
+
 function buildStats(match, winner) {
   const { home, away, inputs } = match;
   const homeFormText = `${home} ${inputs.homeForm >= 7 ? "1-0" : "0-1"}`;
@@ -76,7 +130,7 @@ function buildStats(match, winner) {
   const awayScoring = inputs.scoringTrend === "rising" && winner === away ? "Rising" : inputs.scoringTrend === "low" ? "Low" : inputs.scoringTrend === "volatile" ? "Volatile" : "Stable";
 
   return [
-    ["Stoppage edge", `${home} ${inputs.stoppageEdge >= 0 ? "+" : ""}${inputs.stoppageEdge.toFixed(1)}`, "Transition edge", `${away} ${(-inputs.transitionEdge) >= 0 ? "+" : ""}${(-inputs.transitionEdge).toFixed(1)}`],
+    ["Stoppage edge", `${home} ${inputs.stoppageEdge >= 0 ? "+" : ""}${inputs.stoppageEdge.toFixed(1)}`, "Pressure edge", `${away} ${(-inputs.pressureEdge) >= 0 ? "+" : ""}${(-inputs.pressureEdge).toFixed(1)}`],
     ["Recent form", homeFormText, "Recent form", awayFormText],
     ["Scoring trend", homeScoring, "Scoring trend", awayScoring]
   ];
@@ -97,6 +151,11 @@ function buildReasons(match, winner, loser, diff) {
   if (Math.abs(inputs.transitionEdge) >= 1) {
     const team = inputs.transitionEdge >= 0 ? home : away;
     reasons.push(`${team} looks cleaner in transition, which matters in this matchup.`);
+  }
+
+  if (Math.abs(inputs.pressureEdge) >= 1.5) {
+    const team = inputs.pressureEdge >= 0 ? home : away;
+    reasons.push(`${team} projects with the stronger pressure profile, which affects repeat entries and error rate.`);
   }
 
   reasons.push(`${venueTeam} gets the stronger venue profile at ${venue}.`);
@@ -162,13 +221,25 @@ function buildInjuryText(match, winner, loser, injuryImpact) {
   };
 }
 
-function buildLateOut(match, baseDiff, winner) {
+function buildLateOut(match, baseValues, winner) {
   if (!match.lateOut) {
     return undefined;
   }
 
   const swingDirection = match.lateOut.team === match.home ? -1 : 1;
-  const adjustedDiff = baseDiff + match.lateOut.ratingSwing * swingDirection;
+  const adjustedValues = {
+    ...baseValues,
+    rating: baseValues.rating + match.lateOut.ratingSwing * swingDirection
+  };
+  const adjustedDiff =
+    adjustedValues.rating +
+    adjustedValues.venue +
+    adjustedValues.form +
+    adjustedValues.stoppage +
+    adjustedValues.transition +
+    adjustedValues.pressure +
+    adjustedValues.scoring +
+    adjustedValues.injury;
   const lateWinner = adjustedDiff >= 0 ? match.home : match.away;
   const lateLoser = lateWinner === match.home ? match.away : match.home;
   const lateConfidence = confidenceFromDiff(adjustedDiff, 9);
@@ -193,17 +264,32 @@ function buildLateOut(match, baseDiff, winner) {
     ],
     ...summaries,
     ...injuries,
-    stats: buildStats(match, lateWinner)
+    stats: buildStats(match, lateWinner),
+    modelBreakdown: buildModelBreakdown(match, adjustedValues)
   };
 }
 
 function transformMatch(match) {
   const { inputs } = match;
+  const values = {
+    rating: inputs.homeRating - inputs.awayRating,
+    venue: inputs.venueEdge,
+    form: (inputs.homeForm - inputs.awayForm) * 0.7,
+    stoppage: inputs.stoppageEdge * 0.35,
+    transition: inputs.transitionEdge * 0.4,
+    pressure: inputs.pressureEdge * 0.45,
+    scoring: scoringTrendValue(inputs.scoringTrend),
+    injury: -inputs.injuryImpact * 0.15
+  };
   const diff =
-    (inputs.homeRating - inputs.awayRating) +
-    inputs.venueEdge +
-    (inputs.homeForm - inputs.awayForm) * 0.7 -
-    inputs.injuryImpact * 0.15;
+    values.rating +
+    values.venue +
+    values.form +
+    values.stoppage +
+    values.transition +
+    values.pressure +
+    values.scoring +
+    values.injury;
 
   const winner = diff >= 0 ? match.home : match.away;
   const loser = winner === match.home ? match.away : match.home;
@@ -230,7 +316,8 @@ function transformMatch(match) {
     ...summaries,
     ...injuries,
     stats: buildStats(match, winner),
-    lateOut: buildLateOut(match, diff, winner)
+    modelBreakdown: buildModelBreakdown(match, values),
+    lateOut: buildLateOut(match, values, winner)
   };
 }
 

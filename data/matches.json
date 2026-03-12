@@ -1,6 +1,6 @@
 {
   "round": "Round 2",
-  "generatedAt": "2026-03-12T06:50:44.798Z",
+  "generatedAt": "2026-03-12T07:23:15.233Z",
   "matches": [
     {
       "id": "carlton-richmond",
@@ -10,7 +10,7 @@
       "venue": "MCG",
       "schedule": "Thursday 7:20 PM",
       "winner": "Carlton",
-      "probability": "67%",
+      "probability": "68%",
       "confidence": "Medium",
       "margin": "18 to 30",
       "injury": "moderate",
@@ -39,8 +39,8 @@
         [
           "Stoppage edge",
           "Carlton +3.4",
-          "Transition edge",
-          "Richmond +1.2"
+          "Pressure edge",
+          "Richmond +0.8"
         ],
         [
           "Recent form",
@@ -54,7 +54,53 @@
           "Scoring trend",
           "Stable"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Carlton holds a strong model edge.",
+        "total": "+14.85",
+        "rows": [
+          [
+            "Ratings",
+            "Carlton +9.00",
+            "Richmond -9.00"
+          ],
+          [
+            "Venue",
+            "Carlton +4.00",
+            "Richmond -4.00"
+          ],
+          [
+            "Form",
+            "Carlton +2.10",
+            "Richmond -2.10"
+          ],
+          [
+            "Stoppage",
+            "Carlton +1.19",
+            "Richmond -1.19"
+          ],
+          [
+            "Transition",
+            "Carlton -0.48",
+            "Richmond +0.48"
+          ],
+          [
+            "Pressure",
+            "Carlton -0.36",
+            "Richmond +0.36"
+          ],
+          [
+            "Scoring trend",
+            "Carlton +0.00",
+            "Richmond +0.00"
+          ],
+          [
+            "Injuries",
+            "Carlton -0.60",
+            "Richmond +0.60"
+          ]
+        ]
+      }
     },
     {
       "id": "bulldogs-gws",
@@ -64,7 +110,7 @@
       "venue": "Marvel Stadium",
       "schedule": "Friday 7:40 PM",
       "winner": "GWS",
-      "probability": "46%",
+      "probability": "55%",
       "confidence": "Low",
       "margin": "1 to 12",
       "injury": "high",
@@ -74,7 +120,7 @@
         "GWS rates better on combined team strength and current form.",
         "Bulldogs carries the clearer stoppage edge, which shapes territory and first use.",
         "GWS looks cleaner in transition, which matters in this matchup.",
-        "GWS gets the stronger venue profile at Marvel Stadium."
+        "GWS projects with the stronger pressure profile, which affects repeat entries and error rate."
       ],
       "changes": [
         "A major late out for GWS would tighten the tip quickly.",
@@ -93,8 +139,8 @@
         [
           "Stoppage edge",
           "Bulldogs +2.1",
-          "Transition edge",
-          "GWS +2.0"
+          "Pressure edge",
+          "GWS +4.3"
         ],
         [
           "Recent form",
@@ -109,9 +155,55 @@
           "Rising"
         ]
       ],
+      "modelBreakdown": {
+        "summary": "GWS only holds a narrow model edge.",
+        "total": "-3.80",
+        "rows": [
+          [
+            "Ratings",
+            "Bulldogs -3.00",
+            "GWS +3.00"
+          ],
+          [
+            "Venue",
+            "Bulldogs +2.00",
+            "GWS -2.00"
+          ],
+          [
+            "Form",
+            "Bulldogs -0.70",
+            "GWS +0.70"
+          ],
+          [
+            "Stoppage",
+            "Bulldogs +0.74",
+            "GWS -0.73"
+          ],
+          [
+            "Transition",
+            "Bulldogs -0.80",
+            "GWS +0.80"
+          ],
+          [
+            "Pressure",
+            "Bulldogs -1.93",
+            "GWS +1.94"
+          ],
+          [
+            "Scoring trend",
+            "Bulldogs +1.25",
+            "GWS -1.25"
+          ],
+          [
+            "Injuries",
+            "Bulldogs -1.35",
+            "GWS +1.35"
+          ]
+        ]
+      },
       "lateOut": {
         "winner": "Bulldogs",
-        "probability": "63%",
+        "probability": "62%",
         "confidence": "Medium",
         "margin": "8 to 16",
         "reasons": [
@@ -136,8 +228,8 @@
           [
             "Stoppage edge",
             "Bulldogs +2.1",
-            "Transition edge",
-            "GWS +2.0"
+            "Pressure edge",
+            "GWS +4.3"
           ],
           [
             "Recent form",
@@ -151,7 +243,53 @@
             "Scoring trend",
             "Stable"
           ]
-        ]
+        ],
+        "modelBreakdown": {
+          "summary": "Bulldogs holds a workable model edge.",
+          "total": "+10.20",
+          "rows": [
+            [
+              "Ratings",
+              "Bulldogs +11.00",
+              "GWS -11.00"
+            ],
+            [
+              "Venue",
+              "Bulldogs +2.00",
+              "GWS -2.00"
+            ],
+            [
+              "Form",
+              "Bulldogs -0.70",
+              "GWS +0.70"
+            ],
+            [
+              "Stoppage",
+              "Bulldogs +0.74",
+              "GWS -0.73"
+            ],
+            [
+              "Transition",
+              "Bulldogs -0.80",
+              "GWS +0.80"
+            ],
+            [
+              "Pressure",
+              "Bulldogs -1.93",
+              "GWS +1.94"
+            ],
+            [
+              "Scoring trend",
+              "Bulldogs +1.25",
+              "GWS -1.25"
+            ],
+            [
+              "Injuries",
+              "Bulldogs -1.35",
+              "GWS +1.35"
+            ]
+          ]
+        }
       }
     },
     {
@@ -172,7 +310,7 @@
         "Gold Coast rates better on combined team strength and current form.",
         "Gold Coast carries the clearer stoppage edge, which shapes territory and first use.",
         "Gold Coast looks cleaner in transition, which matters in this matchup.",
-        "Gold Coast gets the stronger venue profile at People First Stadium."
+        "Gold Coast projects with the stronger pressure profile, which affects repeat entries and error rate."
       ],
       "changes": [
         "A major late out for Gold Coast would tighten the tip quickly.",
@@ -191,8 +329,8 @@
         [
           "Stoppage edge",
           "Gold Coast +2.7",
-          "Transition edge",
-          "West Coast -5.4"
+          "Pressure edge",
+          "West Coast -3.8"
         ],
         [
           "Recent form",
@@ -206,7 +344,53 @@
           "Scoring trend",
           "Stable"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Gold Coast holds a strong model edge.",
+        "total": "+37.27",
+        "rows": [
+          [
+            "Ratings",
+            "Gold Coast +20.00",
+            "West Coast -20.00"
+          ],
+          [
+            "Venue",
+            "Gold Coast +8.00",
+            "West Coast -8.00"
+          ],
+          [
+            "Form",
+            "Gold Coast +3.50",
+            "West Coast -3.50"
+          ],
+          [
+            "Stoppage",
+            "Gold Coast +0.95",
+            "West Coast -0.94"
+          ],
+          [
+            "Transition",
+            "Gold Coast +2.16",
+            "West Coast -2.16"
+          ],
+          [
+            "Pressure",
+            "Gold Coast +1.71",
+            "West Coast -1.71"
+          ],
+          [
+            "Scoring trend",
+            "Gold Coast +1.25",
+            "West Coast -1.25"
+          ],
+          [
+            "Injuries",
+            "Gold Coast -0.30",
+            "West Coast +0.30"
+          ]
+        ]
+      }
     },
     {
       "id": "sydney-collingwood",
@@ -216,7 +400,7 @@
       "venue": "SCG",
       "schedule": "Friday 8:10 PM",
       "winner": "Sydney",
-      "probability": "58%",
+      "probability": "57%",
       "confidence": "Low",
       "margin": "10 to 18",
       "injury": "moderate",
@@ -225,8 +409,8 @@
       "reasons": [
         "Sydney rates better on combined team strength and current form.",
         "Sydney carries the clearer stoppage edge, which shapes territory and first use.",
-        "Sydney gets the stronger venue profile at SCG.",
-        "Sydney scoring trend looks stable."
+        "Collingwood projects with the stronger pressure profile, which affects repeat entries and error rate.",
+        "Sydney gets the stronger venue profile at SCG."
       ],
       "changes": [
         "A major late out for Sydney would tighten the tip quickly.",
@@ -245,8 +429,8 @@
         [
           "Stoppage edge",
           "Sydney +1.4",
-          "Transition edge",
-          "Collingwood -0.5"
+          "Pressure edge",
+          "Collingwood +1.8"
         ],
         [
           "Recent form",
@@ -260,7 +444,53 @@
           "Scoring trend",
           "Stable"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Sydney holds a workable model edge.",
+        "total": "+6.13",
+        "rows": [
+          [
+            "Ratings",
+            "Sydney +2.00",
+            "Collingwood -2.00"
+          ],
+          [
+            "Venue",
+            "Sydney +5.00",
+            "Collingwood -5.00"
+          ],
+          [
+            "Form",
+            "Sydney +0.00",
+            "Collingwood +0.00"
+          ],
+          [
+            "Stoppage",
+            "Sydney +0.49",
+            "Collingwood -0.49"
+          ],
+          [
+            "Transition",
+            "Sydney +0.20",
+            "Collingwood -0.20"
+          ],
+          [
+            "Pressure",
+            "Sydney -0.81",
+            "Collingwood +0.81"
+          ],
+          [
+            "Scoring trend",
+            "Sydney +0.00",
+            "Collingwood +0.00"
+          ],
+          [
+            "Injuries",
+            "Sydney -0.75",
+            "Collingwood +0.75"
+          ]
+        ]
+      }
     },
     {
       "id": "brisbane-geelong",
@@ -270,7 +500,7 @@
       "venue": "Gabba",
       "schedule": "Saturday 1:45 PM",
       "winner": "Brisbane",
-      "probability": "55%",
+      "probability": "54%",
       "confidence": "Low",
       "margin": "1 to 12",
       "injury": "high",
@@ -299,8 +529,8 @@
         [
           "Stoppage edge",
           "Brisbane +0.7",
-          "Transition edge",
-          "Geelong +2.0"
+          "Pressure edge",
+          "Geelong -0.3"
         ],
         [
           "Recent form",
@@ -314,7 +544,53 @@
           "Scoring trend",
           "Volatile"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Brisbane only holds a narrow model edge.",
+        "total": "+3.03",
+        "rows": [
+          [
+            "Ratings",
+            "Brisbane +1.00",
+            "Geelong -1.00"
+          ],
+          [
+            "Venue",
+            "Brisbane +4.00",
+            "Geelong -4.00"
+          ],
+          [
+            "Form",
+            "Brisbane +0.00",
+            "Geelong +0.00"
+          ],
+          [
+            "Stoppage",
+            "Brisbane +0.24",
+            "Geelong -0.24"
+          ],
+          [
+            "Transition",
+            "Brisbane -0.80",
+            "Geelong +0.80"
+          ],
+          [
+            "Pressure",
+            "Brisbane +0.14",
+            "Geelong -0.13"
+          ],
+          [
+            "Scoring trend",
+            "Brisbane -0.35",
+            "Geelong +0.35"
+          ],
+          [
+            "Injuries",
+            "Brisbane -1.20",
+            "Geelong +1.20"
+          ]
+        ]
+      }
     },
     {
       "id": "essendon-hawthorn",
@@ -324,9 +600,9 @@
       "venue": "Marvel Stadium",
       "schedule": "Saturday 4:35 PM",
       "winner": "Essendon",
-      "probability": "59%",
+      "probability": "60%",
       "confidence": "Medium",
-      "margin": "10 to 18",
+      "margin": "8 to 16",
       "injury": "moderate",
       "upset": false,
       "updated": false,
@@ -334,7 +610,7 @@
         "Essendon rates better on combined team strength and current form.",
         "Essendon carries the clearer stoppage edge, which shapes territory and first use.",
         "Essendon looks cleaner in transition, which matters in this matchup.",
-        "Essendon gets the stronger venue profile at Marvel Stadium."
+        "Hawthorn projects with the stronger pressure profile, which affects repeat entries and error rate."
       ],
       "changes": [
         "A major late out for Essendon would tighten the tip quickly.",
@@ -353,8 +629,8 @@
         [
           "Stoppage edge",
           "Essendon +4.0",
-          "Transition edge",
-          "Hawthorn -1.2"
+          "Pressure edge",
+          "Hawthorn +2.5"
         ],
         [
           "Recent form",
@@ -368,7 +644,53 @@
           "Scoring trend",
           "Stable"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Essendon holds a workable model edge.",
+        "total": "+8.41",
+        "rows": [
+          [
+            "Ratings",
+            "Essendon +4.00",
+            "Hawthorn -4.00"
+          ],
+          [
+            "Venue",
+            "Essendon +3.00",
+            "Hawthorn -3.00"
+          ],
+          [
+            "Form",
+            "Essendon +1.40",
+            "Hawthorn -1.40"
+          ],
+          [
+            "Stoppage",
+            "Essendon +1.40",
+            "Hawthorn -1.40"
+          ],
+          [
+            "Transition",
+            "Essendon +0.48",
+            "Hawthorn -0.48"
+          ],
+          [
+            "Pressure",
+            "Essendon -1.12",
+            "Hawthorn +1.13"
+          ],
+          [
+            "Scoring trend",
+            "Essendon +0.00",
+            "Hawthorn +0.00"
+          ],
+          [
+            "Injuries",
+            "Essendon -0.75",
+            "Hawthorn +0.75"
+          ]
+        ]
+      }
     },
     {
       "id": "st-kilda-fremantle",
@@ -378,9 +700,9 @@
       "venue": "Marvel Stadium",
       "schedule": "Saturday 7:30 PM",
       "winner": "Fremantle",
-      "probability": "45%",
+      "probability": "57%",
       "confidence": "Low",
-      "margin": "1 to 12",
+      "margin": "10 to 18",
       "injury": "moderate",
       "upset": true,
       "updated": true,
@@ -407,8 +729,8 @@
         [
           "Stoppage edge",
           "St Kilda -0.4",
-          "Transition edge",
-          "Fremantle +1.1"
+          "Pressure edge",
+          "Fremantle +0.6"
         ],
         [
           "Recent form",
@@ -422,7 +744,53 @@
           "Scoring trend",
           "Low"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Fremantle only holds a narrow model edge.",
+        "total": "-5.45",
+        "rows": [
+          [
+            "Ratings",
+            "St Kilda -3.00",
+            "Fremantle +3.00"
+          ],
+          [
+            "Venue",
+            "St Kilda +2.00",
+            "Fremantle -2.00"
+          ],
+          [
+            "Form",
+            "St Kilda -2.10",
+            "Fremantle +2.10"
+          ],
+          [
+            "Stoppage",
+            "St Kilda -0.14",
+            "Fremantle +0.14"
+          ],
+          [
+            "Transition",
+            "St Kilda -0.44",
+            "Fremantle +0.44"
+          ],
+          [
+            "Pressure",
+            "St Kilda -0.27",
+            "Fremantle +0.27"
+          ],
+          [
+            "Scoring trend",
+            "St Kilda -0.75",
+            "Fremantle +0.75"
+          ],
+          [
+            "Injuries",
+            "St Kilda -0.75",
+            "Fremantle +0.75"
+          ]
+        ]
+      }
     },
     {
       "id": "port-adelaide-adelaide",
@@ -432,7 +800,7 @@
       "venue": "Adelaide Oval",
       "schedule": "Sunday 3:20 PM",
       "winner": "Adelaide",
-      "probability": "48%",
+      "probability": "54%",
       "confidence": "Low",
       "margin": "1 to 12",
       "injury": "high",
@@ -460,8 +828,8 @@
         [
           "Stoppage edge",
           "Port Adelaide -0.6",
-          "Transition edge",
-          "Adelaide +0.8"
+          "Pressure edge",
+          "Adelaide +0.2"
         ],
         [
           "Recent form",
@@ -475,7 +843,53 @@
           "Scoring trend",
           "Volatile"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Adelaide only holds a narrow model edge.",
+        "total": "-2.97",
+        "rows": [
+          [
+            "Ratings",
+            "Port Adelaide -1.00",
+            "Adelaide +1.00"
+          ],
+          [
+            "Venue",
+            "Port Adelaide +3.00",
+            "Adelaide -3.00"
+          ],
+          [
+            "Form",
+            "Port Adelaide -2.80",
+            "Adelaide +2.80"
+          ],
+          [
+            "Stoppage",
+            "Port Adelaide -0.21",
+            "Adelaide +0.21"
+          ],
+          [
+            "Transition",
+            "Port Adelaide -0.32",
+            "Adelaide +0.32"
+          ],
+          [
+            "Pressure",
+            "Port Adelaide -0.09",
+            "Adelaide +0.09"
+          ],
+          [
+            "Scoring trend",
+            "Port Adelaide -0.35",
+            "Adelaide +0.35"
+          ],
+          [
+            "Injuries",
+            "Port Adelaide -1.20",
+            "Adelaide +1.20"
+          ]
+        ]
+      }
     },
     {
       "id": "melbourne-north-melbourne",
@@ -495,7 +909,7 @@
         "Melbourne rates better on combined team strength and current form.",
         "Melbourne carries the clearer stoppage edge, which shapes territory and first use.",
         "Melbourne looks cleaner in transition, which matters in this matchup.",
-        "Melbourne gets the stronger venue profile at MCG."
+        "Melbourne projects with the stronger pressure profile, which affects repeat entries and error rate."
       ],
       "changes": [
         "A major late out for Melbourne would tighten the tip quickly.",
@@ -514,8 +928,8 @@
         [
           "Stoppage edge",
           "Melbourne +3.2",
-          "Transition edge",
-          "North Melbourne -4.0"
+          "Pressure edge",
+          "North Melbourne -2.4"
         ],
         [
           "Recent form",
@@ -529,7 +943,53 @@
           "Scoring trend",
           "Stable"
         ]
-      ]
+      ],
+      "modelBreakdown": {
+        "summary": "Melbourne holds a strong model edge.",
+        "total": "+31.55",
+        "rows": [
+          [
+            "Ratings",
+            "Melbourne +18.00",
+            "North Melbourne -18.00"
+          ],
+          [
+            "Venue",
+            "Melbourne +6.00",
+            "North Melbourne -6.00"
+          ],
+          [
+            "Form",
+            "Melbourne +2.80",
+            "North Melbourne -2.80"
+          ],
+          [
+            "Stoppage",
+            "Melbourne +1.12",
+            "North Melbourne -1.12"
+          ],
+          [
+            "Transition",
+            "Melbourne +1.60",
+            "North Melbourne -1.60"
+          ],
+          [
+            "Pressure",
+            "Melbourne +1.08",
+            "North Melbourne -1.08"
+          ],
+          [
+            "Scoring trend",
+            "Melbourne +1.25",
+            "North Melbourne -1.25"
+          ],
+          [
+            "Injuries",
+            "Melbourne -0.30",
+            "North Melbourne +0.30"
+          ]
+        ]
+      }
     }
   ]
 }

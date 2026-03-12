@@ -571,10 +571,15 @@
       padding: 16px;
     }
 
-    .panel h4 {
-      margin: 0 0 12px;
-      font-size: 15px;
-    }
+.panel h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+.breakdown-summary {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 
     .tab-panel {
       display: none;

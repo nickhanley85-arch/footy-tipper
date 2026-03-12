@@ -94,6 +94,21 @@ function renderStats(stats) {
   setText("statValue3Right", row3[3]);
 }
 
+function renderModelBreakdown(modelBreakdown) {
+  const list = document.getElementById("modelBreakdownList");
+  if (!list || !modelBreakdown) {
+    return;
+  }
+
+  setText("modelBreakdownSummary", `${modelBreakdown.summary} Total edge ${modelBreakdown.total}.`);
+  list.innerHTML = modelBreakdown.rows.map((row) => `
+    <div class="split">
+      <div><strong>${row[0]}</strong><div class="tiny">${row[1]}</div></div>
+      <div><strong>${row[0]}</strong><div class="tiny">${row[2]}</div></div>
+    </div>
+  `).join("");
+}
+
 function createMatchCard(match) {
   const reasonItems = match.reasons.slice(0, 3).map((reason) => `<li>${reason}</li>`).join("");
   const confidenceClass = match.confidence.toLowerCase();
@@ -198,6 +213,7 @@ function renderMatchDetail() {
   setText("injuryAwayText", match.injuryAwayText);
   setText("injuryModelText", match.injuryModelText);
   renderStats(match.stats);
+  renderModelBreakdown(match.modelBreakdown);
 
   const showLateOutBanner = state.lateOutActive && Boolean(match.lateOut);
   lateOutBanner.style.display = showLateOutBanner ? "flex" : "none";

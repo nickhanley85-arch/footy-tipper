@@ -90,6 +90,11 @@ const testScript = `
           previewText("#metricWinner") === "Carlton",
           previewText("#metricWinner")
         );
+        check(
+          "model breakdown renders",
+          previewText("#modelBreakdownSummary") && previewText("#modelBreakdownSummary").includes("Total edge"),
+          previewText("#modelBreakdownSummary")
+        );
 
         const search = document.querySelector("#matchSearch");
         search.value = "Marvel";
