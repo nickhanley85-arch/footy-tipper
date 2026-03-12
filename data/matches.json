@@ -1,0 +1,535 @@
+{
+  "round": "Round 2",
+  "generatedAt": "2026-03-12T06:50:44.798Z",
+  "matches": [
+    {
+      "id": "carlton-richmond",
+      "title": "Carlton vs Richmond",
+      "home": "Carlton",
+      "away": "Richmond",
+      "venue": "MCG",
+      "schedule": "Thursday 7:20 PM",
+      "winner": "Carlton",
+      "probability": "67%",
+      "confidence": "Medium",
+      "margin": "18 to 30",
+      "injury": "moderate",
+      "upset": false,
+      "updated": false,
+      "reasons": [
+        "Carlton rates better on combined team strength and current form.",
+        "Carlton carries the clearer stoppage edge, which shapes territory and first use.",
+        "Richmond looks cleaner in transition, which matters in this matchup.",
+        "Carlton gets the stronger venue profile at MCG."
+      ],
+      "changes": [
+        "A major late out for Carlton would tighten the tip quickly.",
+        "If Richmond improves its contest exits, the margin band narrows sharply.",
+        "Weather or late selection shifts could soften the current edge."
+      ],
+      "summaryHome": "Carlton gets the cleaner projected path at MCG.",
+      "summaryAway": "Richmond needs cleaner transition and availability to overturn the lean.",
+      "summaryModel": "The model has a clear lean, but not enough to call it a lock.",
+      "injuryHomeTitle": "Carlton",
+      "injuryHomeText": "Carlton looks structurally cleaner right now, which supports the current edge.",
+      "injuryAwayTitle": "Richmond",
+      "injuryAwayText": "Richmond needs stronger availability to offset the broader rating gap.",
+      "injuryModelText": "Moderate injury sensitivity. One team change can move confidence, but not always the winner.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Carlton +3.4",
+          "Transition edge",
+          "Richmond +1.2"
+        ],
+        [
+          "Recent form",
+          "Carlton 1-0",
+          "Recent form",
+          "Richmond 0-1"
+        ],
+        [
+          "Scoring trend",
+          "Stable",
+          "Scoring trend",
+          "Stable"
+        ]
+      ]
+    },
+    {
+      "id": "bulldogs-gws",
+      "title": "Bulldogs vs GWS",
+      "home": "Bulldogs",
+      "away": "GWS",
+      "venue": "Marvel Stadium",
+      "schedule": "Friday 7:40 PM",
+      "winner": "GWS",
+      "probability": "46%",
+      "confidence": "Low",
+      "margin": "1 to 12",
+      "injury": "high",
+      "upset": true,
+      "updated": true,
+      "reasons": [
+        "GWS rates better on combined team strength and current form.",
+        "Bulldogs carries the clearer stoppage edge, which shapes territory and first use.",
+        "GWS looks cleaner in transition, which matters in this matchup.",
+        "GWS gets the stronger venue profile at Marvel Stadium."
+      ],
+      "changes": [
+        "A major late out for GWS would tighten the tip quickly.",
+        "If Bulldogs improves its contest exits, the margin band narrows sharply.",
+        "Final team confirmation still matters because this game is structurally sensitive."
+      ],
+      "summaryHome": "Bulldogs still has enough home shape to keep the game competitive.",
+      "summaryAway": "GWS carries the stronger current profile and a narrow model edge.",
+      "summaryModel": "This is a volatile tip and should be rechecked when final teams land.",
+      "injuryHomeTitle": "Bulldogs",
+      "injuryHomeText": "Bulldogs still has enough quality to stay live, but list risk is part of the drag.",
+      "injuryAwayTitle": "GWS",
+      "injuryAwayText": "GWS looks slightly cleaner on availability, which helps the away lean.",
+      "injuryModelText": "This match is marked injury-sensitive. Re-run the tip once final teams land.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Bulldogs +2.1",
+          "Transition edge",
+          "GWS +2.0"
+        ],
+        [
+          "Recent form",
+          "Bulldogs 1-0",
+          "Recent form",
+          "GWS 1-0"
+        ],
+        [
+          "Scoring trend",
+          "Stable",
+          "Scoring trend",
+          "Rising"
+        ]
+      ],
+      "lateOut": {
+        "winner": "Bulldogs",
+        "probability": "63%",
+        "confidence": "Medium",
+        "margin": "8 to 16",
+        "reasons": [
+          "Late GWS forward-line out removes part of the away scoring edge.",
+          "Bulldogs becomes more influential in a tighter contest after the adjustment.",
+          "The venue still keeps the game close, so confidence does not improve."
+        ],
+        "changes": [
+          "If GWS absorbs the late change well, the model could swing back.",
+          "Another availability issue for Bulldogs would reverse the gain quickly.",
+          "Final weather and sub decisions remain important."
+        ],
+        "summaryHome": "Bulldogs gets the cleaner projected path at Marvel Stadium.",
+        "summaryAway": "GWS needs cleaner transition and availability to overturn the lean.",
+        "summaryModel": "The model has a clear lean, but not enough to call it a lock.",
+        "injuryHomeTitle": "Bulldogs",
+        "injuryHomeText": "Bulldogs looks structurally cleaner right now, which supports the current edge.",
+        "injuryAwayTitle": "GWS",
+        "injuryAwayText": "GWS needs stronger availability to offset the broader rating gap.",
+        "injuryModelText": "This match is marked injury-sensitive. Re-run the tip once final teams land.",
+        "stats": [
+          [
+            "Stoppage edge",
+            "Bulldogs +2.1",
+            "Transition edge",
+            "GWS +2.0"
+          ],
+          [
+            "Recent form",
+            "Bulldogs 1-0",
+            "Recent form",
+            "GWS 1-0"
+          ],
+          [
+            "Scoring trend",
+            "Rising",
+            "Scoring trend",
+            "Stable"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "gold-coast-west-coast",
+      "title": "Gold Coast vs West Coast",
+      "home": "Gold Coast",
+      "away": "West Coast",
+      "venue": "People First Stadium",
+      "schedule": "Sunday 1:10 PM",
+      "winner": "Gold Coast",
+      "probability": "74%",
+      "confidence": "High",
+      "margin": "20 to 35",
+      "injury": "low",
+      "upset": false,
+      "updated": true,
+      "reasons": [
+        "Gold Coast rates better on combined team strength and current form.",
+        "Gold Coast carries the clearer stoppage edge, which shapes territory and first use.",
+        "Gold Coast looks cleaner in transition, which matters in this matchup.",
+        "Gold Coast gets the stronger venue profile at People First Stadium."
+      ],
+      "changes": [
+        "A major late out for Gold Coast would tighten the tip quickly.",
+        "If West Coast improves its contest exits, the margin band narrows sharply.",
+        "Weather or late selection shifts could soften the current edge."
+      ],
+      "summaryHome": "Gold Coast gets the cleaner projected path at People First Stadium.",
+      "summaryAway": "West Coast needs cleaner transition and availability to overturn the lean.",
+      "summaryModel": "This is one of the stronger positions on the board and projects cleanly.",
+      "injuryHomeTitle": "Gold Coast",
+      "injuryHomeText": "Gold Coast looks structurally cleaner right now, which supports the current edge.",
+      "injuryAwayTitle": "West Coast",
+      "injuryAwayText": "West Coast needs stronger availability to offset the broader rating gap.",
+      "injuryModelText": "Low injury sensitivity. The margin is more likely to move than the winner.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Gold Coast +2.7",
+          "Transition edge",
+          "West Coast -5.4"
+        ],
+        [
+          "Recent form",
+          "Gold Coast 1-0",
+          "Recent form",
+          "West Coast 0-1"
+        ],
+        [
+          "Scoring trend",
+          "Rising",
+          "Scoring trend",
+          "Stable"
+        ]
+      ]
+    },
+    {
+      "id": "sydney-collingwood",
+      "title": "Sydney vs Collingwood",
+      "home": "Sydney",
+      "away": "Collingwood",
+      "venue": "SCG",
+      "schedule": "Friday 8:10 PM",
+      "winner": "Sydney",
+      "probability": "58%",
+      "confidence": "Low",
+      "margin": "10 to 18",
+      "injury": "moderate",
+      "upset": true,
+      "updated": true,
+      "reasons": [
+        "Sydney rates better on combined team strength and current form.",
+        "Sydney carries the clearer stoppage edge, which shapes territory and first use.",
+        "Sydney gets the stronger venue profile at SCG.",
+        "Sydney scoring trend looks stable."
+      ],
+      "changes": [
+        "A major late out for Sydney would tighten the tip quickly.",
+        "If Collingwood improves its contest exits, the margin band narrows sharply.",
+        "Weather or late selection shifts could soften the current edge."
+      ],
+      "summaryHome": "Sydney gets the cleaner projected path at SCG.",
+      "summaryAway": "Collingwood needs cleaner transition and availability to overturn the lean.",
+      "summaryModel": "This is a volatile tip and should be rechecked when final teams land.",
+      "injuryHomeTitle": "Sydney",
+      "injuryHomeText": "Sydney looks structurally cleaner right now, which supports the current edge.",
+      "injuryAwayTitle": "Collingwood",
+      "injuryAwayText": "Collingwood needs stronger availability to offset the broader rating gap.",
+      "injuryModelText": "Moderate injury sensitivity. One team change can move confidence, but not always the winner.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Sydney +1.4",
+          "Transition edge",
+          "Collingwood -0.5"
+        ],
+        [
+          "Recent form",
+          "Sydney 1-0",
+          "Recent form",
+          "Collingwood 1-0"
+        ],
+        [
+          "Scoring trend",
+          "Stable",
+          "Scoring trend",
+          "Stable"
+        ]
+      ]
+    },
+    {
+      "id": "brisbane-geelong",
+      "title": "Brisbane vs Geelong",
+      "home": "Brisbane",
+      "away": "Geelong",
+      "venue": "Gabba",
+      "schedule": "Saturday 1:45 PM",
+      "winner": "Brisbane",
+      "probability": "55%",
+      "confidence": "Low",
+      "margin": "1 to 12",
+      "injury": "high",
+      "upset": true,
+      "updated": true,
+      "reasons": [
+        "Brisbane rates better on combined team strength and current form.",
+        "Geelong looks cleaner in transition, which matters in this matchup.",
+        "Brisbane gets the stronger venue profile at Gabba.",
+        "Confidence is reduced because final teams could materially change the balance."
+      ],
+      "changes": [
+        "A major late out for Brisbane would tighten the tip quickly.",
+        "If Geelong improves its contest exits, the margin band narrows sharply.",
+        "Final team confirmation still matters because this game is structurally sensitive."
+      ],
+      "summaryHome": "Brisbane gets the cleaner projected path at Gabba.",
+      "summaryAway": "Geelong needs cleaner transition and availability to overturn the lean.",
+      "summaryModel": "This is a volatile tip and should be rechecked when final teams land.",
+      "injuryHomeTitle": "Brisbane",
+      "injuryHomeText": "Brisbane looks structurally cleaner right now, which supports the current edge.",
+      "injuryAwayTitle": "Geelong",
+      "injuryAwayText": "Geelong needs stronger availability to offset the broader rating gap.",
+      "injuryModelText": "This match is marked injury-sensitive. Re-run the tip once final teams land.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Brisbane +0.7",
+          "Transition edge",
+          "Geelong +2.0"
+        ],
+        [
+          "Recent form",
+          "Brisbane 1-0",
+          "Recent form",
+          "Geelong 1-0"
+        ],
+        [
+          "Scoring trend",
+          "Stable",
+          "Scoring trend",
+          "Volatile"
+        ]
+      ]
+    },
+    {
+      "id": "essendon-hawthorn",
+      "title": "Essendon vs Hawthorn",
+      "home": "Essendon",
+      "away": "Hawthorn",
+      "venue": "Marvel Stadium",
+      "schedule": "Saturday 4:35 PM",
+      "winner": "Essendon",
+      "probability": "59%",
+      "confidence": "Medium",
+      "margin": "10 to 18",
+      "injury": "moderate",
+      "upset": false,
+      "updated": false,
+      "reasons": [
+        "Essendon rates better on combined team strength and current form.",
+        "Essendon carries the clearer stoppage edge, which shapes territory and first use.",
+        "Essendon looks cleaner in transition, which matters in this matchup.",
+        "Essendon gets the stronger venue profile at Marvel Stadium."
+      ],
+      "changes": [
+        "A major late out for Essendon would tighten the tip quickly.",
+        "If Hawthorn improves its contest exits, the margin band narrows sharply.",
+        "Weather or late selection shifts could soften the current edge."
+      ],
+      "summaryHome": "Essendon gets the cleaner projected path at Marvel Stadium.",
+      "summaryAway": "Hawthorn needs cleaner transition and availability to overturn the lean.",
+      "summaryModel": "The model has a clear lean, but not enough to call it a lock.",
+      "injuryHomeTitle": "Essendon",
+      "injuryHomeText": "Essendon looks structurally cleaner right now, which supports the current edge.",
+      "injuryAwayTitle": "Hawthorn",
+      "injuryAwayText": "Hawthorn needs stronger availability to offset the broader rating gap.",
+      "injuryModelText": "Moderate injury sensitivity. One team change can move confidence, but not always the winner.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Essendon +4.0",
+          "Transition edge",
+          "Hawthorn -1.2"
+        ],
+        [
+          "Recent form",
+          "Essendon 1-0",
+          "Recent form",
+          "Hawthorn 0-1"
+        ],
+        [
+          "Scoring trend",
+          "Stable",
+          "Scoring trend",
+          "Stable"
+        ]
+      ]
+    },
+    {
+      "id": "st-kilda-fremantle",
+      "title": "St Kilda vs Fremantle",
+      "home": "St Kilda",
+      "away": "Fremantle",
+      "venue": "Marvel Stadium",
+      "schedule": "Saturday 7:30 PM",
+      "winner": "Fremantle",
+      "probability": "45%",
+      "confidence": "Low",
+      "margin": "1 to 12",
+      "injury": "moderate",
+      "upset": true,
+      "updated": true,
+      "reasons": [
+        "Fremantle rates better on combined team strength and current form.",
+        "Fremantle looks cleaner in transition, which matters in this matchup.",
+        "Fremantle gets the stronger venue profile at Marvel Stadium.",
+        "Fremantle is projected into a lower-scoring game script."
+      ],
+      "changes": [
+        "A major late out for Fremantle would tighten the tip quickly.",
+        "If St Kilda improves its contest exits, the margin band narrows sharply.",
+        "Weather or late selection shifts could soften the current edge."
+      ],
+      "summaryHome": "St Kilda still has enough home shape to keep the game competitive.",
+      "summaryAway": "Fremantle carries the stronger current profile and a narrow model edge.",
+      "summaryModel": "This is a volatile tip and should be rechecked when final teams land.",
+      "injuryHomeTitle": "St Kilda",
+      "injuryHomeText": "St Kilda still has enough quality to stay live, but list risk is part of the drag.",
+      "injuryAwayTitle": "Fremantle",
+      "injuryAwayText": "Fremantle looks slightly cleaner on availability, which helps the away lean.",
+      "injuryModelText": "Moderate injury sensitivity. One team change can move confidence, but not always the winner.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "St Kilda -0.4",
+          "Transition edge",
+          "Fremantle +1.1"
+        ],
+        [
+          "Recent form",
+          "St Kilda 0-1",
+          "Recent form",
+          "Fremantle 1-0"
+        ],
+        [
+          "Scoring trend",
+          "Low",
+          "Scoring trend",
+          "Low"
+        ]
+      ]
+    },
+    {
+      "id": "port-adelaide-adelaide",
+      "title": "Port Adelaide vs Adelaide",
+      "home": "Port Adelaide",
+      "away": "Adelaide",
+      "venue": "Adelaide Oval",
+      "schedule": "Sunday 3:20 PM",
+      "winner": "Adelaide",
+      "probability": "48%",
+      "confidence": "Low",
+      "margin": "1 to 12",
+      "injury": "high",
+      "upset": true,
+      "updated": true,
+      "reasons": [
+        "Adelaide rates better on combined team strength and current form.",
+        "Adelaide gets the stronger venue profile at Adelaide Oval.",
+        "Confidence is reduced because final teams could materially change the balance."
+      ],
+      "changes": [
+        "A major late out for Adelaide would tighten the tip quickly.",
+        "If Port Adelaide improves its contest exits, the margin band narrows sharply.",
+        "Final team confirmation still matters because this game is structurally sensitive."
+      ],
+      "summaryHome": "Port Adelaide still has enough home shape to keep the game competitive.",
+      "summaryAway": "Adelaide carries the stronger current profile and a narrow model edge.",
+      "summaryModel": "This is a volatile tip and should be rechecked when final teams land.",
+      "injuryHomeTitle": "Port Adelaide",
+      "injuryHomeText": "Port Adelaide still has enough quality to stay live, but list risk is part of the drag.",
+      "injuryAwayTitle": "Adelaide",
+      "injuryAwayText": "Adelaide looks slightly cleaner on availability, which helps the away lean.",
+      "injuryModelText": "This match is marked injury-sensitive. Re-run the tip once final teams land.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Port Adelaide -0.6",
+          "Transition edge",
+          "Adelaide +0.8"
+        ],
+        [
+          "Recent form",
+          "Port Adelaide 0-1",
+          "Recent form",
+          "Adelaide 1-0"
+        ],
+        [
+          "Scoring trend",
+          "Stable",
+          "Scoring trend",
+          "Volatile"
+        ]
+      ]
+    },
+    {
+      "id": "melbourne-north-melbourne",
+      "title": "Melbourne vs North Melbourne",
+      "home": "Melbourne",
+      "away": "North Melbourne",
+      "venue": "MCG",
+      "schedule": "Sunday 3:20 PM",
+      "winner": "Melbourne",
+      "probability": "74%",
+      "confidence": "High",
+      "margin": "20 to 35",
+      "injury": "low",
+      "upset": false,
+      "updated": false,
+      "reasons": [
+        "Melbourne rates better on combined team strength and current form.",
+        "Melbourne carries the clearer stoppage edge, which shapes territory and first use.",
+        "Melbourne looks cleaner in transition, which matters in this matchup.",
+        "Melbourne gets the stronger venue profile at MCG."
+      ],
+      "changes": [
+        "A major late out for Melbourne would tighten the tip quickly.",
+        "If North Melbourne improves its contest exits, the margin band narrows sharply.",
+        "Weather or late selection shifts could soften the current edge."
+      ],
+      "summaryHome": "Melbourne gets the cleaner projected path at MCG.",
+      "summaryAway": "North Melbourne needs cleaner transition and availability to overturn the lean.",
+      "summaryModel": "This is one of the stronger positions on the board and projects cleanly.",
+      "injuryHomeTitle": "Melbourne",
+      "injuryHomeText": "Melbourne looks structurally cleaner right now, which supports the current edge.",
+      "injuryAwayTitle": "North Melbourne",
+      "injuryAwayText": "North Melbourne needs stronger availability to offset the broader rating gap.",
+      "injuryModelText": "Low injury sensitivity. The margin is more likely to move than the winner.",
+      "stats": [
+        [
+          "Stoppage edge",
+          "Melbourne +3.2",
+          "Transition edge",
+          "North Melbourne -4.0"
+        ],
+        [
+          "Recent form",
+          "Melbourne 1-0",
+          "Recent form",
+          "North Melbourne 0-1"
+        ],
+        [
+          "Scoring trend",
+          "Rising",
+          "Scoring trend",
+          "Stable"
+        ]
+      ]
+    }
+  ]
+}

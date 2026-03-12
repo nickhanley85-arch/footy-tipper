@@ -1,0 +1,190 @@
+{
+  "round": "Round 2",
+  "matches": [
+    {
+      "id": "carlton-richmond",
+      "home": "Carlton",
+      "away": "Richmond",
+      "venue": "MCG",
+      "schedule": "Thursday 7:20 PM",
+      "updated": false,
+      "inputs": {
+        "homeRating": 81,
+        "awayRating": 72,
+        "venueEdge": 4,
+        "homeForm": 7,
+        "awayForm": 4,
+        "injuryImpact": 4,
+        "stoppageEdge": 3.4,
+        "transitionEdge": -1.2,
+        "pressureEdge": -0.8,
+        "scoringTrend": "stable"
+      }
+    },
+    {
+      "id": "bulldogs-gws",
+      "home": "Bulldogs",
+      "away": "GWS",
+      "venue": "Marvel Stadium",
+      "schedule": "Friday 7:40 PM",
+      "updated": true,
+      "inputs": {
+        "homeRating": 76,
+        "awayRating": 79,
+        "venueEdge": 2,
+        "homeForm": 7,
+        "awayForm": 8,
+        "injuryImpact": 9,
+        "stoppageEdge": 2.1,
+        "transitionEdge": -2.0,
+        "pressureEdge": -4.3,
+        "scoringTrend": "rising"
+      },
+      "lateOut": {
+        "team": "GWS",
+        "ratingSwing": 14,
+        "summary": "Late GWS forward-line out removes part of the away scoring edge."
+      }
+    },
+    {
+      "id": "gold-coast-west-coast",
+      "home": "Gold Coast",
+      "away": "West Coast",
+      "venue": "People First Stadium",
+      "schedule": "Sunday 1:10 PM",
+      "updated": true,
+      "inputs": {
+        "homeRating": 83,
+        "awayRating": 63,
+        "venueEdge": 8,
+        "homeForm": 8,
+        "awayForm": 3,
+        "injuryImpact": 2,
+        "stoppageEdge": 2.7,
+        "transitionEdge": 5.4,
+        "pressureEdge": 3.8,
+        "scoringTrend": "rising"
+      }
+    },
+    {
+      "id": "sydney-collingwood",
+      "home": "Sydney",
+      "away": "Collingwood",
+      "venue": "SCG",
+      "schedule": "Friday 8:10 PM",
+      "updated": true,
+      "inputs": {
+        "homeRating": 80,
+        "awayRating": 78,
+        "venueEdge": 5,
+        "homeForm": 8,
+        "awayForm": 8,
+        "injuryImpact": 5,
+        "stoppageEdge": 1.4,
+        "transitionEdge": 0.5,
+        "pressureEdge": -1.8,
+        "scoringTrend": "stable"
+      }
+    },
+    {
+      "id": "brisbane-geelong",
+      "home": "Brisbane",
+      "away": "Geelong",
+      "venue": "Gabba",
+      "schedule": "Saturday 1:45 PM",
+      "updated": true,
+      "inputs": {
+        "homeRating": 82,
+        "awayRating": 81,
+        "venueEdge": 4,
+        "homeForm": 8,
+        "awayForm": 8,
+        "injuryImpact": 8,
+        "stoppageEdge": 0.7,
+        "transitionEdge": -2.0,
+        "pressureEdge": 0.3,
+        "scoringTrend": "volatile"
+      }
+    },
+    {
+      "id": "essendon-hawthorn",
+      "home": "Essendon",
+      "away": "Hawthorn",
+      "venue": "Marvel Stadium",
+      "schedule": "Saturday 4:35 PM",
+      "updated": false,
+      "inputs": {
+        "homeRating": 77,
+        "awayRating": 73,
+        "venueEdge": 3,
+        "homeForm": 7,
+        "awayForm": 5,
+        "injuryImpact": 5,
+        "stoppageEdge": 4.0,
+        "transitionEdge": 1.2,
+        "pressureEdge": -2.5,
+        "scoringTrend": "stable"
+      }
+    },
+    {
+      "id": "st-kilda-fremantle",
+      "home": "St Kilda",
+      "away": "Fremantle",
+      "venue": "Marvel Stadium",
+      "schedule": "Saturday 7:30 PM",
+      "updated": true,
+      "inputs": {
+        "homeRating": 72,
+        "awayRating": 75,
+        "venueEdge": 2,
+        "homeForm": 4,
+        "awayForm": 7,
+        "injuryImpact": 5,
+        "stoppageEdge": -0.4,
+        "transitionEdge": -1.1,
+        "pressureEdge": -0.6,
+        "scoringTrend": "low"
+      }
+    },
+    {
+      "id": "port-adelaide-adelaide",
+      "home": "Port Adelaide",
+      "away": "Adelaide",
+      "venue": "Adelaide Oval",
+      "schedule": "Sunday 3:20 PM",
+      "updated": true,
+      "inputs": {
+        "homeRating": 76,
+        "awayRating": 77,
+        "venueEdge": 3,
+        "homeForm": 4,
+        "awayForm": 8,
+        "injuryImpact": 8,
+        "stoppageEdge": -0.6,
+        "transitionEdge": -0.8,
+        "pressureEdge": -0.2,
+        "scoringTrend": "volatile"
+      }
+    },
+    {
+      "id": "melbourne-north-melbourne",
+      "home": "Melbourne",
+      "away": "North Melbourne",
+      "venue": "MCG",
+      "schedule": "Sunday 3:20 PM",
+      "updated": false,
+      "inputs": {
+        "homeRating": 82,
+        "awayRating": 64,
+        "venueEdge": 6,
+        "homeForm": 7,
+        "awayForm": 3,
+        "injuryImpact": 2,
+        "stoppageEdge": 3.2,
+        "transitionEdge": 4.0,
+        "pressureEdge": 2.4,
+        "scoringTrend": "rising"
+      }
+    }
+  ]
+}

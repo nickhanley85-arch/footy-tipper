@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Footy Tipper</title>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/dafxunjrs/image/upload/v1773296767/ChatGPT_Image_Mar_12_2026_05_17_43_PM_kbepew.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <img
+          class="brand-badge"
+          src="https://res.cloudinary.com/dafxunjrs/image/upload/v1773296767/ChatGPT_Image_Mar_12_2026_05_17_43_PM_kbepew.png"
+          alt="Footy Tipper icon"
+        />
+        <div>
+          <img
+            class="brand-logo"
+            src="https://res.cloudinary.com/dafxunjrs/image/upload/v1773296330/ChatGPT_Image_Mar_12_2026_05_17_33_PM_qejni4.png"
+            alt="Footy Tipper logo"
+          />
+          <p>AFL prediction assistant</p>
+        </div>
+      </div>
+
+      <div class="mobile-nav">
+        <select id="mobileSectionNav">
+          <option value="overview">Round Overview</option>
+          <option value="match-detail">Match Detail</option>
+          <option value="review">Review Last Round</option>
+          <option value="ladder">Ladder Forecast</option>
+          <option value="teams">Team Pages</option>
+          <option value="alerts">Alerts</option>
+          <option value="states">States</option>
+        </select>
+      </div>
+
+      <nav class="nav" id="sideNav">
+        <a href="#overview" class="active">Round Overview</a>
+        <a href="#match-detail">Match Detail</a>
+        <a href="#review">Review Last Round</a>
+        <a href="#ladder">Ladder Forecast</a>
+        <a href="#teams">Team Pages</a>
+        <a href="#alerts">Alerts</a>
+        <a href="#states">States</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <h3>UX focus</h3>
+        <p>Fast scan first. Deeper reasoning second. Every tip needs a visible reason, not just a number. The product also needs clear states when a tip changes late.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar" id="overview">
+        <div class="page-title">
+          <h2>Round 2 Overview</h2>
+          <p>Footy Tipper turns injuries, form, venue edge, and team stats into clear AFL tips. This version adds real interaction: match selection, filtering, search, tab switching, and a late-out tip change simulation.</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="btn subtle" id="lastUpdatedBtn">Last updated: Thu 5:42 PM</button>
+          <button class="btn" id="injuryRefreshBtn">Injury refresh</button>
+          <button class="btn primary" id="lateOutToggle">Simulate late out</button>
+        </div>
+      </div>
+
+      <section class="hero">
+        <div class="card">
+          <h3>This round at a glance</h3>
+          <p>Primary UX goal: let the user scan the whole round in under 30 seconds, then click into any game for the reasoning and the injury context.</p>
+          <div class="hero-grid">
+            <div class="stat">
+              <div class="stat-label">Games this round</div>
+              <div class="stat-value" id="gamesCount">9</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">High confidence</div>
+              <div class="stat-value" id="highConfidenceCount">3</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Upset watch</div>
+              <div class="stat-value" id="upsetCount">3</div>
+            </div>
+            <div class="stat">
+              <div class="stat-label">Model accuracy</div>
+              <div class="stat-value">60%</div>
+            </div>
+          </div>
+          <div class="callout-row">
+            <div class="callout">
+              <strong>Best scan path</strong>
+              <div class="tiny">Overview first, one selected game second, review page third.</div>
+            </div>
+            <div class="callout">
+              <strong>Trust signal</strong>
+              <div class="tiny">Show updated time, last injury sync, and model version on every key screen.</div>
+            </div>
+            <div class="callout">
+              <strong>Retention hook</strong>
+              <div class="tiny">Only alert when a late out or selection shift changes confidence or winner.</div>
+            </div>
+            <div class="callout">
+              <strong>Core action</strong>
+              <div class="tiny">Users should be able to sort, filter, and open a match detail screen in one tap.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Priority alerts</h3>
+          <div class="list" id="priorityAlerts">
+            <div class="list-item">
+              <div>
+                <strong>Bulldogs vs GWS</strong>
+                <div class="tiny">Late team changes could shift the tip</div>
+              </div>
+              <span class="confidence low">Low</span>
+            </div>
+            <div class="list-item">
+              <div>
+                <strong>Sydney selection watch</strong>
+                <div class="tiny">Two key names listed as test</div>
+              </div>
+              <span class="confidence medium">Watch</span>
+            </div>
+            <div class="list-item">
+              <div>
+                <strong>Gold Coast trending up</strong>
+                <div class="tiny">Home form now a major model factor</div>
+              </div>
+              <span class="confidence high">Strong</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <div>
+            <h3>Round tips</h3>
+            <p>Interactive prototype version of the primary round screen. Select a match, filter the list, or trigger a late-out state.</p>
+          </div>
+          <a class="btn" href="#match-detail" id="jumpToSelected">Jump to selected match</a>
+        </div>
+
+        <div class="filters" id="primaryFilters">
+          <button class="chip active" data-filter="all">All matches</button>
+          <button class="chip" data-filter="sort-confidence">Sort by confidence</button>
+          <button class="chip" data-filter="injury">Injury-sensitive</button>
+          <button class="chip" data-filter="upset">Upset watch</button>
+          <button class="chip" data-filter="reasoning">Show full reasoning</button>
+        </div>
+
+        <div class="sub-toolbar">
+          <div class="search">
+            <input type="text" id="matchSearch" placeholder="Search team or venue" />
+          </div>
+          <div class="filters" style="margin:0;" id="secondaryFilters">
+            <button class="chip secondary-active" data-secondary="round-2">Round 2</button>
+            <button class="chip" data-secondary="venues">All venues</button>
+            <button class="chip" data-secondary="updated">Updated only</button>
+          </div>
+        </div>
+
+        <div class="matches" id="matchesList"></div>
+
+        <div class="empty-state" id="emptyState">
+          No matches fit the current filters. Clear the search or switch the active filter.
+        </div>
+      </section>
+
+      <section class="section" id="match-detail">
+        <div class="section-head">
+          <div>
+            <h3>Match detail</h3>
+            <p>This is the most important screen after the round list. Click a match card to update this area.</p>
+          </div>
+          <div class="filters" style="margin:0;">
+            <span class="chip active" id="selectedMatchPill">Selected match: Bulldogs vs GWS</span>
+            <span class="chip" id="detailUpdatedPill">Last updated 5:42 PM</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="inline-banner" id="lateOutBanner">
+            <strong>Tip changed after late out.</strong>
+            Bulldogs vs GWS moved from GWS 56% to Bulldogs 53%. Confidence stays low because the game is still close.
+          </div>
+
+          <div class="tab-bar" id="tabBar">
+            <button class="tab active" data-tab="overview-tab">Overview</button>
+            <button class="tab" data-tab="injuries-tab">Injuries</button>
+            <button class="tab" data-tab="stats-tab">Stats</button>
+            <a class="tab" href="#review">Review</a>
+          </div>
+
+          <div class="tab-panel active" id="overview-tab">
+            <div class="metric-grid">
+              <div class="metric">
+                <div class="metric-label">Predicted winner</div>
+                <div class="metric-value" id="metricWinner">GWS</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Win probability</div>
+                <div class="metric-value" id="metricProbability">56%</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Confidence</div>
+                <div class="metric-value" id="metricConfidence">Low</div>
+              </div>
+              <div class="metric">
+                <div class="metric-label">Margin band</div>
+                <div class="metric-value" id="metricMargin">1 to 10</div>
+              </div>
+            </div>
+
+            <div class="detail-grid">
+              <div class="stack">
+                <div class="panel">
+                  <h4 id="overviewReasonsTitle">Top reasons for the tip</h4>
+                  <ul class="reason-list" id="overviewReasons" style="margin-top:0;">
+                    <li>GWS forward depth rates stronger across four quarters.</li>
+                    <li>Bulldogs midfield can control parts of the match, but the model prefers GWS transition.</li>
+                    <li>Confidence is reduced because final teams could materially change the balance.</li>
+                    <li>Marvel conditions slightly narrow the margin range.</li>
+                  </ul>
+                </div>
+
+                <div class="panel">
+                  <h4>What would change this tip</h4>
+                  <ul class="reason-list" id="tipChangeList" style="margin-top:0;">
+                    <li>A major late out in GWS forward line.</li>
+                    <li>Unexpected Bulldogs selection boost around stoppage support.</li>
+                    <li>New injury report that changes structural balance.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="stack">
+                <div class="panel">
+                  <h4>Quick match summary</h4>
+                  <div class="status-grid">
+                    <div class="status-card">
+                      <h5>Home team</h5>
+                      <p id="summaryHome">Bulldogs at Marvel Stadium, where clean stoppage exits matter.</p>
+                    </div>
+                    <div class="status-card">
+                      <h5>Away team</h5>
+                      <p id="summaryAway">GWS brings stronger forward depth and better transition shape.</p>
+                    </div>
+                    <div class="status-card">
+                      <h5>Model note</h5>
+                      <p id="summaryModel">This match is marked injury-sensitive. Re-run the tip once final teams land.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="injuries-tab">
+            <div class="panel">
+              <h4>Injury and selection summary</h4>
+              <div class="status-grid">
+                <div class="status-card">
+                  <h5 id="injuryHomeTitle">Bulldogs</h5>
+                  <p id="injuryHomeText">One structural concern. Midfield group still strong. Late selection changes could matter.</p>
+                </div>
+                <div class="status-card">
+                  <h5 id="injuryAwayTitle">GWS</h5>
+                  <p id="injuryAwayText">List condition looks slightly cleaner. That supports the narrow model edge.</p>
+                </div>
+                <div class="status-card">
+                  <h5>Model note</h5>
+                  <p id="injuryModelText">This match is marked injury-sensitive. Re-run the tip once final teams land.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-panel" id="stats-tab">
+            <div class="panel">
+              <h4>Team comparison snapshot</h4>
+              <div class="split-list">
+                <div class="split">
+                  <div><strong id="statLabel1Left">Clearance edge</strong><div class="tiny" id="statValue1Left">Bulldogs +2.1</div></div>
+                  <div><strong id="statLabel1Right">Forward-half pressure</strong><div class="tiny" id="statValue1Right">GWS +4.3</div></div>
+                </div>
+                <div class="split">
+                  <div><strong id="statLabel2Left">Recent form</strong><div class="tiny" id="statValue2Left">Bulldogs 1-0</div></div>
+                  <div><strong id="statLabel2Right">Recent form</strong><div class="tiny" id="statValue2Right">GWS 1-0</div></div>
+                </div>
+                <div class="split">
+                  <div><strong id="statLabel3Left">Scoring trend</strong><div class="tiny" id="statValue3Left">Stable</div></div>
+                  <div><strong id="statLabel3Right">Scoring trend</strong><div class="tiny" id="statValue3Right">Rising</div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="footer-note">Match detail UX rule: answer first, evidence second, uncertainty always visible.</p>
+        </div>
+      </section>
+
+      <section class="two-col section" id="states">
+        <div class="card">
+          <h3>UX states</h3>
+          <p>These are the product states the real app will need. Use the “Simulate late out” button above to trigger one of them in the detail screen.</p>
+          <div class="state-grid">
+            <div class="state-card">
+              <span class="state-badge pending">Pending</span>
+              <h4>Injury update pending</h4>
+              <div class="tiny">Show that the current tip may move once the next official list is refreshed.</div>
+            </div>
+            <div class="state-card">
+              <span class="state-badge changed">Changed</span>
+              <h4>Tip changed after late out</h4>
+              <div class="tiny">Make the change obvious, show the old tip, the new tip, and why it moved.</div>
+            </div>
+            <div class="state-card">
+              <span class="state-badge complete">Complete</span>
+              <h4>Review now available</h4>
+              <div class="tiny">Once a game finishes, switch the CTA from preview to review.</div>
+            </div>
+            <div class="state-card">
+              <span class="state-badge empty">Empty</span>
+              <h4>No data yet</h4>
+              <div class="tiny">Use a calm empty state for new rounds, preseason, or delayed source feeds.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>CX notes</h3>
+          <div class="list">
+            <div class="list-item">
+              <div>
+                <strong>Trust</strong>
+                <div class="tiny">Show last updated time, source layer, and uncertainty on overview and detail screens.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <strong>Speed</strong>
+                <div class="tiny">One-tap scan of all tips before deeper reading. Search and sort must stay lightweight.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <strong>Learning loop</strong>
+                <div class="tiny">After each round, explain misses and model changes in plain language.</div>
+              </div>
+            </div>
+            <div class="list-item">
+              <div>
+                <strong>Retention</strong>
+                <div class="tiny">Push alerts only when injuries or late outs materially change a tip.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="two-col section" id="review">
+        <div class="card">
+          <h3>Review last round</h3>
+          <div class="review-row">
+            <strong>Gold Coast vs Geelong</strong>
+            <span>Tip: Geelong</span>
+            <span>Actual: Gold Coast</span>
+            <span class="badge bad">Miss</span>
+          </div>
+          <div class="review-row">
+            <strong>GWS vs Hawthorn</strong>
+            <span>Tip: GWS</span>
+            <span>Actual: GWS</span>
+            <span class="badge good">Hit</span>
+          </div>
+          <div class="review-row">
+            <strong>St Kilda vs Collingwood</strong>
+            <span>Tip: Collingwood</span>
+            <span>Actual: Collingwood</span>
+            <span class="badge good">Hit</span>
+          </div>
+          <div class="review-row">
+            <strong>Brisbane vs Bulldogs</strong>
+            <span>Tip: Brisbane</span>
+            <span>Actual: Bulldogs</span>
+            <span class="badge neutral">Review needed</span>
+          </div>
+          <p class="footer-note">Review design goal: the product should openly show what it got wrong, what changed, and what factor now gets reweighted.</p>
+        </div>
+
+        <div class="card" id="ladder">
+          <h3>Trend and ladder modules</h3>
+          <div class="chart">Placeholder for form chart, power rating trend, or projected ladder movement.</div>
+          <p class="footer-note">This block can later become an interactive chart with team filters, confidence history, rolling power ratings, and projected ladder movement by round.</p>
+        </div>
+      </section>
+
+      <section class="section" id="teams">
+        <div class="section-head">
+          <div>
+            <h3>Team page modules</h3>
+            <p>The app will need a team-level view, not just round views. These cards sketch the content blocks for that screen.</p>
+          </div>
+        </div>
+        <div class="team-grid">
+          <div class="team-card">
+            <h4>Carlton</h4>
+            <div class="tiny">Injury watch, form trend, next opponent, players to watch.</div>
+          </div>
+          <div class="team-card">
+            <h4>Sydney</h4>
+            <div class="tiny">Home-ground strength, scoring profile, current list health.</div>
+          </div>
+          <div class="team-card">
+            <h4>Gold Coast</h4>
+            <div class="tiny">Rising trend, home edge, confidence movement across rounds.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="alerts">
+        <div class="section-head">
+          <div>
+            <h3>Alert UX</h3>
+            <p>Alerts should be sparse and useful. Most apps overdo this. This one should not.</p>
+          </div>
+        </div>
+        <div class="alert-list">
+          <div class="alert-card">
+            <strong>Tip changed: Bulldogs vs GWS</strong>
+            <div class="tiny">Late out pushes the model from GWS 56% to Bulldogs 53%. Review before lockout.</div>
+          </div>
+          <div class="alert-card">
+            <strong>Injury sync complete</strong>
+            <div class="tiny">Three matches updated. One confidence score changed by more than 5%.</div>
+          </div>
+          <div class="alert-card">
+            <strong>Round review ready</strong>
+            <div class="tiny">Opening Round accuracy is posted. Two misses now include model notes.</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>  <script src="./app.js"></script>
+</body>
+</html>
+
+

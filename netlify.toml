@@ -1,0 +1,9 @@
+[build]
+command = "npm run build"
+publish = "."
+
+[[headers]]
+for = "/data/*"
+
+[headers.values]
+Cache-Control = "no-cache, no-store, must-revalidate"

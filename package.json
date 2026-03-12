@@ -1,0 +1,14 @@
+{
+  "name": "footy-tipper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static AFL tipping prototype with generated round data.",
+  "scripts": {
+    "build": "node ./scripts/generate-tips.js",
+    "serve": "node ./server.js",
+    "test:preview": "node ./preview_smoke_test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
